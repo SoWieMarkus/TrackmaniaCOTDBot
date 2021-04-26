@@ -15,9 +15,21 @@ With the API of trackmania.io I am collecting data about the most recent cup of 
 
 ### How to get the results of a cup of the day using the trackmania.io API
 
+The first information I need to get the result of a cup is the `competion id` of the cup
+
+### Get the competition Id
+
 Last update: 27.04.2021
 
 GET `https://trackmania.io/api/cotd/0`
+
+| Name               | Type        | Description       | 
+| ------------------ | ----------- | ----------------- | 
+| `id`           | long      | Id of the competition. You need this to access the results of the cup. |
+| `name`      | String      | Name of the competition. You can extract the date from that. | 
+| `players` | long        | Amount of player participating at the cup | 
+| `starttime`             | long      | timestamp of the start of the competition |
+| `endtime`    | long        | timestamp of the end of the competition  |
 
 ```
 {
@@ -41,5 +53,4 @@ GET `https://trackmania.io/api/cotd/0`
 }
 ```
 
-
-The collected data will be sent to my <a href"https://github.com/SoWieMarkus/TrackmaniaCOTDRestAPI">Trackmania COTD Rest API</a>. There the leaderboard will be calculated. The  <a href"https://github.com/SoWieMarkus/TrackmaniaCOTDApp">Trackmania App for Android</a> will access the leaderboards via that API.
+The collected data will be sent to my <a href="https://github.com/SoWieMarkus/TrackmaniaCOTDRestAPI">Trackmania COTD Rest API</a>. There the leaderboard will be calculated. The  <a href="https://github.com/SoWieMarkus/TrackmaniaCOTDApp">Trackmania App for Android</a> will access the leaderboards via that API.
