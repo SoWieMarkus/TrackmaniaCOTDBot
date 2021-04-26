@@ -1,4 +1,4 @@
-# TrackmaniaCOTDBot
+# Trackmania COTD Bot
 
 ## How does it work?
 
