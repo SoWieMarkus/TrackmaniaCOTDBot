@@ -2,6 +2,8 @@
 
 ## How does it work?
 
+Last update: 27.04.2021
+
 I am using the the API <a href="trackmania.io">trackmania.io</a> by <a href="https://github.com/codecat">CodeCat</a>. If you want to use this API for your own projects, <a href="https://github.com/codecat">CodeCat</a> allowes the usage of the API under the following conditions:
 
 * The API is unsupported. If CodeCat removes/changes something, CodeCat will (likely) not give notice of it, and you'll have to deal with it yourself.
@@ -18,8 +20,6 @@ With the API of trackmania.io I am collecting data about the most recent cup of 
 The first information I need to get the result of a cup is the `competion id` of the cup
 
 ### Get the competition Id
-
-Last update: 27.04.2021
 
 GET `https://trackmania.io/api/cotd/0`
 
@@ -49,6 +49,68 @@ GET `https://trackmania.io/api/cotd/0`
       endtime: 1619378190
     },
   ...
+  ]
+}
+```
+
+###
+
+GET `https://trackmania.io/api/comp/<competitionId>`
+
+```
+{
+  id: 344,
+  numplayers: 2532,
+  liveid: "LID-COMP-oyportjala2mm5p",
+  creator: "afe7e1c1-7086-48f7-bde9-a7e320647510",
+  creatordisplayname: "Nadeo",
+  name: "Cup of the Day 2021-04-26",
+  description: "",
+  registrationstart: 0,
+  registrationend: 0,
+  startdate: 1619457390,
+  enddate: 1619464590,
+  leaderboardid: 1179,
+  manialink: "",
+  rulesurl: "",
+  streamurl: "",
+  websiteurl: "",
+  logourl: "",
+  verticalurl: "",
+  rounds: [
+    {
+      id: 645,
+      name: "Round",
+      status: "COMPLETED",
+      matches: [
+        {
+          id: 5163,
+          name: "Match 1",
+          completed: true
+        },
+        {
+          id: 5164,
+          name: "Match 2",
+          completed: true
+        },
+        ...
+  ],
+  challengequalifier: {
+    id: 232,
+    name: "Cup of the Day 2021-04-26 - Challenge",
+    status: "HAS_SERVERS",
+    servers: 0,
+    maps: 1,
+    admins: [
+      {
+        accountid: "0060a0c1-2e62-41e7-9db7-c86236af3ac4",
+        displayname: "magnetik.org"
+      },
+      {
+        accountid: "54e4dda4-522d-496f-8a8b-fe0d0b5a2a8f",
+        displayname: "Braxilior"
+      },
+      ...
   ]
 }
 ```
