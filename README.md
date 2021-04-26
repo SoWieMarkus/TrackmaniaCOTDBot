@@ -2,7 +2,7 @@
 
 ## How does it work?
 
-I am using the the API trackmania.io by <a href="https://github.com/codecat">CodeCat</a>. If you want to use this API for your own projects, <a href="https://github.com/codecat">CodeCat</a> allowes the usage of the API under the following conditions:
+I am using the the API <a href="trackmania.io">trackmania.io</a> by <a href="https://github.com/codecat">CodeCat</a>. If you want to use this API for your own projects, <a href="https://github.com/codecat">CodeCat</a> allowes the usage of the API under the following conditions:
 
 * The API is unsupported. If CodeCat remove/change something, CodeCat will (likely) not give notice of it, and you'll have to deal with it yourself.
 * The API is undocumented. You're on your own to figure out how the API works and what you need from it.
