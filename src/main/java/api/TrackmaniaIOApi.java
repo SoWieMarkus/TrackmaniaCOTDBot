@@ -48,5 +48,32 @@ public class TrackmaniaIOApi {
         postRequest.execute();
     }
 
+    public void init(){
+        Thread thread = new Thread(){
+
+            @Override
+            public void run() {
+                super.run();
+                List<Competition> competitions = getRecentCompetitions(10);
+                for (int i = 0; i < competitions.size(); i++) {
+                    COTD cotd = getCotd(competitions.get(i).getId());
+                    if (cotd.getRounds() == null || cotd.getRounds().isEmpty() || !cotd.getRounds().get(0).isCompleted()) continue;
+                    List<Player> results = getResultsOfCup(competitions.get(i).getId(), cotd.getRounds().get(0).getMatches().get(0).getId());
+                    COTDDTO cotddto = new COTDDTO(competitions.get(i), cotd, results);
+                    sendDataToMyRestAPI(cotddto);
+                    System.out.println(i);
+                    try {
+                        sleep(5000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+
+        };
+        thread.start();
+    }
+
 
 }

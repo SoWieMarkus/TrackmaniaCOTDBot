@@ -22,7 +22,7 @@ public class GetRequest<T>{
         try {
             URL uri = new URL(url);
             HttpURLConnection connection = (HttpURLConnection) uri.openConnection();
-            connection.addRequestProperty("User-Agent","Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0");
+            connection.addRequestProperty("User-Agent","trackmania-leaderboard-harvest-bot by SoWieMarkus (Markus#2348) https://github.com/SoWieMarkus/TrackmaniaCOTDBot");
             String result = parseResult(connection);
             return parse(result);
         } catch (Exception e) {
