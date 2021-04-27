@@ -6,6 +6,7 @@ import api.models.cotd.COTD;
 import api.models.dto.COTDDTO;
 import api.models.player.Player;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -18,6 +19,7 @@ public class Bot {
             @Override
             public void run() {
                 try {
+                    System.out.println(new Date().toString() + ": Searching ..." );
                     List<Competition> competitions = ioApi.getRecentCompetitions(1);
                     COTD cotd = ioApi.getCotd(competitions.get(0).getId());
                     if (cotd.getRounds() == null || cotd.getRounds().isEmpty() || !cotd.getRounds().get(0).isCompleted())

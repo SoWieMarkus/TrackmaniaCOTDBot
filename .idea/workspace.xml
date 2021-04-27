@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b038a41-18a7-48f5-8291-925268939013" name="Default Changelist" comment="">
+    <list default="true" id="9c8cb08d-27cc-4258-89cc-411ad31296ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/TrackmaniaIOApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/TrackmaniaIOApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/api/TrackmaniaIOApi$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/api/TrackmaniaIOApi$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/api/TrackmaniaIOApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/api/TrackmaniaIOApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bot/Bot$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bot/Bot$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bot/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bot/Bot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trackmaniaiohavestingbot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/trackmaniaiohavestingbot.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,10 +22,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1rijGS7b2TlAUsPW4VXaQWQ70vy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -31,10 +43,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Maven.trackmania-io-havesting-bot [clean...]">
     <configuration name="Bot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="bot.Bot" />
-      <module name="trackmania-io-havesting-bot" />
+      <module name="trackmaniaiohavestingbot" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="bot.*" />
@@ -45,6 +59,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="trackmania-io-havesting-bot [clean...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Bot" />
+      <item itemvalue="Maven.trackmania-io-havesting-bot [clean...]" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Bot" />
@@ -83,9 +127,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bot/Bot.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/main/java/api/TrackmaniaIOApi.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

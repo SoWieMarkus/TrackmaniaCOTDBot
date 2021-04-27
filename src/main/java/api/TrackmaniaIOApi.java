@@ -44,7 +44,7 @@ public class TrackmaniaIOApi {
     }
 
     public void sendDataToMyRestAPI(COTDDTO cotddto) {
-        PostRequest<COTDDTO> postRequest = new PostRequest<>("http://localhost:8080/cotd/update/" + cotddto.getYear() + "/" + cotddto.getMonth() + "/" + cotddto.getDay(), cotddto);
+        PostRequest<COTDDTO> postRequest = new PostRequest<>("http://85.214.165.29:8080/cotd/update/" + cotddto.getYear() + "/" + cotddto.getMonth() + "/" + cotddto.getDay(), cotddto);
         postRequest.execute();
     }
 
@@ -54,20 +54,24 @@ public class TrackmaniaIOApi {
             @Override
             public void run() {
                 super.run();
-                List<Competition> competitions = getRecentCompetitions(10);
+                List<Competition> competitions = getRecentCompetitions(11);
                 for (int i = 0; i < competitions.size(); i++) {
                     COTD cotd = getCotd(competitions.get(i).getId());
                     if (cotd.getRounds() == null || cotd.getRounds().isEmpty() || !cotd.getRounds().get(0).isCompleted()) continue;
                     List<Player> results = getResultsOfCup(competitions.get(i).getId(), cotd.getRounds().get(0).getMatches().get(0).getId());
                     COTDDTO cotddto = new COTDDTO(competitions.get(i), cotd, results);
                     sendDataToMyRestAPI(cotddto);
-                    System.out.println(i);
+                    System.out.println("COTD <"+i+"> : " + ((((double)(i*5000)/(competitions.size() * 5000))*100) + "%"));
+
+
+
                     try {
                         sleep(5000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
+                int x = 0;
             }
 
 
