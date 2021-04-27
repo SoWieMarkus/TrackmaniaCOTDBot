@@ -62,9 +62,6 @@ public class TrackmaniaIOApi {
                     COTDDTO cotddto = new COTDDTO(competitions.get(i), cotd, results);
                     sendDataToMyRestAPI(cotddto);
                     System.out.println("COTD <"+i+"> : " + ((((double)(i*5000)/(competitions.size() * 5000))*100) + "%"));
-
-
-
                     try {
                         sleep(5000);
                     } catch (InterruptedException e) {

@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c8cb08d-27cc-4258-89cc-411ad31296ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/api/TrackmaniaIOApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/TrackmaniaIOApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/api/TrackmaniaIOApi$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/api/TrackmaniaIOApi$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/api/TrackmaniaIOApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/api/TrackmaniaIOApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bot/Bot$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bot/Bot$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bot/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bot/Bot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trackmaniaiohavestingbot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/trackmaniaiohavestingbot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cotd-bot.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/cotd-bot.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +47,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="bot.Bot" />
-      <module name="trackmaniaiohavestingbot" />
+      <module name="trackmania-io-havesting-bot" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="bot.*" />
@@ -105,7 +104,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1619465709070</updated>
-      <workItem from="1619465715635" duration="5971000" />
+      <workItem from="1619465715635" duration="7243000" />
+      <workItem from="1619537072339" duration="1549000" />
     </task>
     <servers />
   </component>
@@ -117,7 +117,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
