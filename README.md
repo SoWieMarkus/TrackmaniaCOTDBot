@@ -1,5 +1,7 @@
 # Trackmania COTD Bot
 
+This project is a bot to harvest the results of the cup of the days.
+
 ## How does it work?
 
 Last update: 27.04.2021
