@@ -21,7 +21,9 @@ The first information I need to get the result of a cup is the `competion id` of
 
 ### Get the competition Id
 
-GET `https://trackmania.io/api/cotd/0`
+GET `https://trackmania.io/api/cotd/<page>`
+
+CodeCat has a nice feature to page the results. The `page` parameter can be any number bigger or equal to zero. If you call `https://trackmania.io/api/cotd/0` you will get the first (normally) 25 results. If you need more information you can call `https://trackmania.io/api/cotd/1` afterwards to get the next 25 results.
 
 | Name               | Type        | Description       | 
 | ------------------ | ----------- | ----------------- | 
@@ -53,7 +55,9 @@ GET `https://trackmania.io/api/cotd/0`
 }
 ```
 
-###
+With that competition Id we can query the actual competition behind the cup of the day.
+
+### Get the competition behind the cup of the day
 
 GET `https://trackmania.io/api/comp/<competitionId>`
 
@@ -94,6 +98,8 @@ GET `https://trackmania.io/api/comp/<competitionId>`
           completed: true
         },
         ...
+      ]
+    }
   ],
   challengequalifier: {
     id: 232,
@@ -114,5 +120,43 @@ GET `https://trackmania.io/api/comp/<competitionId>`
   ]
 }
 ```
+
+Many information ^^. For this project the interesting data is only the `id` of the first match and the `status` of the first round. Because only players from division one can qualify for the leaderboard we can ignore the other matches. Also the status of the first round is important to check if there are already results for the cup. If `status` is not equal to `COMPLETED` the bot will come back later.
+
+### Get the results of the cup of the day
+
+GET `https://trackmania.io/api/comp/<ompetionId>/results/<matchId>/<page>`
+
+```
+{
+  results: [
+    {
+      accountid: "fb678553-f730-442a-a035-dfc50f4a5b7b",
+      displayname: "mime..",
+      zone: {
+        name: "Dolnośląskie",
+        flag: "dolnoslaskie",
+        parent: {
+          name: "Poland",
+          flag: "POL",
+          parent: {
+            name: "Europe",
+            flag: "europe",
+            parent: {
+              name: "World",
+              flag: "WOR"
+            }
+          }
+        }
+      },
+      position: 1,
+      score: 54
+    },
+    ...
+  ]
+}
+```
+
+*IMPORTANT* The score returned by this call is NOT the score used in the leaderboard!
 
 The collected data will be sent to my <a href="https://github.com/SoWieMarkus/TrackmaniaCOTDRestAPI">Trackmania COTD Rest API</a>. There the leaderboard will be calculated. The  <a href="https://github.com/SoWieMarkus/TrackmaniaCOTDApp">Trackmania App for Android</a> will access the leaderboards via that API.
