@@ -6,7 +6,7 @@ This project is a bot to harvest the results of the cup of the days.
 
 Last update: 27.04.2021
 
-I am using the the API <a href="trackmania.io">trackmania.io</a> by <a href="https://github.com/codecat">CodeCat</a>. If you want to use this API for your own projects, <a href="https://github.com/codecat">CodeCat</a> allowes the usage of the API under the following conditions:
+I am using the API of <a href="trackmania.io">trackmania.io</a> by <a href="https://github.com/codecat">CodeCat</a>. If you want to use this API for your own projects, <a href="https://github.com/codecat">CodeCat</a> allowes the usage of the API under the following conditions:
 
 * The API is unsupported. If CodeCat removes/changes something, CodeCat will (likely) not give notice of it, and you'll have to deal with it yourself.
 * The API is undocumented. You're on your own to figure out how the API works and what you need from it.
