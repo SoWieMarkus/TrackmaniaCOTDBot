@@ -19,7 +19,7 @@ With the API of trackmania.io I am collecting data about the most recent cup of 
 
 ### How to get the results of a cup of the day using the trackmania.io API
 
-The first information I need to get the result of a cup is the `competion id` of the cup
+The first information I need to get the result of a cup is the `competition id` of the cup
 
 ### Get the competition Id
 
