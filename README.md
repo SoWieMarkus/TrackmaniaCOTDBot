@@ -127,7 +127,7 @@ Many information ^^. For this project the interesting data is only the `id` of t
 
 ### Get the results of the cup of the day
 
-GET `https://trackmania.io/api/comp/<ompetionId>/results/<matchId>/<page>`
+GET `https://trackmania.io/api/comp/<ompetionId>/match/<matchId>/<page>`
 
 ```
 {
