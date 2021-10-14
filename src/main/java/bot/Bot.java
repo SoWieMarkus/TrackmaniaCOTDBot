@@ -16,8 +16,8 @@ public class Bot {
 
     public static void main(String[] args) {
         TrackmaniaIOApi ioApi = new TrackmaniaIOApi();
-        ioApi.init();
-        /*TimerTask timerTask = new TimerTask() {
+        //ioApi.init();
+        TimerTask timerTask = new TimerTask() {
             @Override
             public void run() {
                 try {
@@ -46,7 +46,7 @@ public class Bot {
             }
         };
         Timer timer = new Timer();
-        timer.scheduleAtFixedRate(timerTask, 0, 10 * 60 * 1000L);*/
+        timer.scheduleAtFixedRate(timerTask, 0, 10 * 60 * 1000L);
     }
 
 

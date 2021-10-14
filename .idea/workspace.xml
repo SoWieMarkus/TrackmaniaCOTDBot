@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c8cb08d-27cc-4258-89cc-411ad31296ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/models/cotd/COTDPlayerResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/91729c4d27686ed9425f76664ac16a100a8deef4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/91729c4d27686ed9425f76664ac16a100a8deef4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/af7604de95c9c4f1400fd12994b863da85560bd7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/af7604de95c9c4f1400fd12994b863da85560bd7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/api/TrackmaniaIOApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/TrackmaniaIOApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/api/models/cotd/COTDResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/models/cotd/COTDResults.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/api/models/dto/COTDDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/models/dto/COTDDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/api/models/dto/PlayerResultDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/models/dto/PlayerResultDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/api/models/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/models/player/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/api/TrackmaniaIOApi$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/api/TrackmaniaIOApi$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/api/TrackmaniaIOApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/api/TrackmaniaIOApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/api/models/cotd/COTDResults.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/api/models/cotd/COTDResults.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/api/models/dto/COTDDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/api/models/dto/COTDDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/api/models/dto/PlayerResultDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/api/models/dto/PlayerResultDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/api/models/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/api/models/player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bot/Bot$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bot/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bot/Bot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cotd-bot.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/trackmania-io-havesting-bot-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/trackmania-io-havesting-bot-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -147,6 +124,7 @@
       <workItem from="1629454805598" duration="886000" />
       <workItem from="1631701601983" duration="683000" />
       <workItem from="1631719722352" duration="13000" />
+      <workItem from="1634252037054" duration="250000" />
     </task>
     <servers />
   </component>
