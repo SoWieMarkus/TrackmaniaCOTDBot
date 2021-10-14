@@ -3,6 +3,7 @@ package bot;
 import api.TrackmaniaIOApi;
 import api.models.Competition;
 import api.models.cotd.COTD;
+import api.models.cotd.COTDPlayerResult;
 import api.models.dto.COTDDTO;
 import api.models.player.Player;
 
@@ -15,25 +16,37 @@ public class Bot {
 
     public static void main(String[] args) {
         TrackmaniaIOApi ioApi = new TrackmaniaIOApi();
-        TimerTask timerTask = new TimerTask() {
+        ioApi.init();
+        /*TimerTask timerTask = new TimerTask() {
             @Override
             public void run() {
                 try {
                     System.out.println(new Date().toString() + ": Searching ..." );
                     List<Competition> competitions = ioApi.getRecentCompetitions(1);
-                    COTD cotd = ioApi.getCotd(competitions.get(0).getId());
+
+                    COTD cotd = null;
+                    for (Competition competition : competitions) {
+                        if (competition.getName().contains("#1")) {
+                            cotd = ioApi.getCotd(competition.getId());
+                            break;
+                        }
+                    }
+                    if (cotd == null) return;
                     if (cotd.getRounds() == null || cotd.getRounds().isEmpty() || !cotd.getRounds().get(0).isCompleted())
                         return;
-                    List<Player> results = ioApi.getResultsOfCup(competitions.get(0).getId(), cotd.getRounds().get(0).getMatches().get(0).getId());
+                    List<COTDPlayerResult> results = ioApi.getResultsOfCup(competitions.get(0).getId(), cotd.getRounds().get(0).getMatches().get(0).getId());
                     COTDDTO cotddto = new COTDDTO(competitions.get(0), cotd, results);
-                    ioApi.sendDataToMyRestAPI(cotddto);
+                    if (cotddto.getEdition() == 1) {
+                        ioApi.sendDataToMyRestAPI(cotddto);
+                    }
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         };
         Timer timer = new Timer();
-        timer.scheduleAtFixedRate(timerTask, 0, 10 * 60 * 1000L);
+        timer.scheduleAtFixedRate(timerTask, 0, 10 * 60 * 1000L);*/
     }
 
 

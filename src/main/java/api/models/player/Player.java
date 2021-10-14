@@ -4,32 +4,29 @@ import com.google.gson.annotations.SerializedName;
 
 public class Player {
 
-    @SerializedName(value = "accountId", alternate = {"accountid"})
-    private String accountId;
+    @SerializedName(value = "id")
+    private String id;
 
-    @SerializedName(value = "displayName", alternate = {"displayname"})
-    private String displayName;
+    @SerializedName(value = "name")
+    private String name;
 
-    @SerializedName("zone")
+    @SerializedName(value="zone")
     private Zone zone;
 
-    @SerializedName("position")
-    private int position;
-
-    public String getAccountId() {
-        return accountId;
+    public String getId() {
+        return id;
     }
 
-    public void setAccountId(String accountId) {
-        this.accountId = accountId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getDisplayName() {
-        return displayName;
+    public String getName() {
+        return name;
     }
 
-    public void setDisplayName(String displayName) {
-        this.displayName = displayName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Zone getZone() {
@@ -38,13 +35,5 @@ public class Player {
 
     public void setZone(Zone zone) {
         this.zone = zone;
-    }
-
-    public int getPosition() {
-        return position;
-    }
-
-    public void setPosition(int position) {
-        this.position = position;
     }
 }

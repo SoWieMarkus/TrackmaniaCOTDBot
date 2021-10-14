@@ -1,5 +1,6 @@
 package api.models.dto;
 
+import api.models.cotd.COTDPlayerResult;
 import api.models.player.Player;
 import com.google.gson.Gson;
 
@@ -10,11 +11,11 @@ public class PlayerResultDTO {
     private String zone;
     private int rank;
 
-    public PlayerResultDTO(Player player) {
-        this.accountId = player.getAccountId();
-        this.accountName = player.getDisplayName();
-        this.rank = player.getPosition();
-        this.zone = new Gson().toJson(player.getZone());
+    public PlayerResultDTO(COTDPlayerResult cotdPlayerResult) {
+        this.accountId = cotdPlayerResult.getPlayer().getId();
+        this.accountName = cotdPlayerResult.getPlayer().getName();
+        this.rank = cotdPlayerResult.getPosition();
+        this.zone = new Gson().toJson(cotdPlayerResult.getPlayer().getZone());
     }
 
     public String getZone() {

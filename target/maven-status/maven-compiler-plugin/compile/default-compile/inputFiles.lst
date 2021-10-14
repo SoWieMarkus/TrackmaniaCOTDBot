@@ -1,8 +1,10 @@
 C:\Users\Markus\Desktop\Trackmania\TrackmaniaCOTDBot\src\main\java\api\models\dto\PlayerResultDTO.java
 C:\Users\Markus\Desktop\Trackmania\TrackmaniaCOTDBot\src\main\java\api\models\player\Player.java
 C:\Users\Markus\Desktop\Trackmania\TrackmaniaCOTDBot\src\main\java\api\models\Competition.java
+C:\Users\Markus\Desktop\Trackmania\TrackmaniaCOTDBot\src\main\java\api\models\cotd\COTDPlayerResult.java
 C:\Users\Markus\Desktop\Trackmania\TrackmaniaCOTDBot\src\main\java\api\models\RecentCompetitions.java
 C:\Users\Markus\Desktop\Trackmania\TrackmaniaCOTDBot\src\main\java\api\models\Round.java
+C:\Users\Markus\Desktop\Trackmania\TrackmaniaCOTDBot\src\main\java\api\models\author\Map.java
 C:\Users\Markus\Desktop\Trackmania\TrackmaniaCOTDBot\src\main\java\api\models\cotd\COTD.java
 C:\Users\Markus\Desktop\Trackmania\TrackmaniaCOTDBot\src\main\java\api\models\cotd\COTDResults.java
 C:\Users\Markus\Desktop\Trackmania\TrackmaniaCOTDBot\src\main\java\api\models\Match.java

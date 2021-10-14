@@ -2,6 +2,7 @@ package api.models.dto;
 
 import api.models.Competition;
 import api.models.cotd.COTD;
+import api.models.cotd.COTDPlayerResult;
 import api.models.player.Player;
 
 import java.lang.management.PlatformLoggingMXBean;
@@ -22,25 +23,37 @@ public class COTDDTO {
     private long endTime;
     private long leaderBoardId;
     private int players;
+    private int edition;
 
     private List<PlayerResultDTO> playerResultDTOS;
 
-    public COTDDTO(Competition competition, COTD cotd, List<Player> players) {
+    public COTDDTO(Competition competition, COTD cotd, List<COTDPlayerResult> players) {
         this.id = competition.getId();
         String date = cotd.getName().replace("Cup of the Day ", "");
+        date = date.replace(" ", "-");
+        date = date.replace("#", "");
         String[] dateParts = date.split("-");
         this.year = Integer.parseInt(dateParts[0]);
         this.month = Integer.parseInt(dateParts[1]);
         this.day = Integer.parseInt(dateParts[2]);
+        this.edition = Integer.parseInt(dateParts[3]);
         this.startTime = competition.getStartTime();
         this.endTime = competition.getEndTime();
         this.leaderBoardId = cotd.getLeaderBoardId();
         this.players = competition.getPlayers();
         this.name = competition.getName();
         this.playerResultDTOS = new ArrayList<>();
-        for (Player player :players) {
+        for (COTDPlayerResult player :players) {
             playerResultDTOS.add(new PlayerResultDTO(player));
         }
+    }
+
+    public int getEdition() {
+        return edition;
+    }
+
+    public void setEdition(int edition) {
+        this.edition = edition;
     }
 
     public long getId() {

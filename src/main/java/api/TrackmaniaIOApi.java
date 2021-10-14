@@ -3,6 +3,7 @@ package api;
 import api.models.Competition;
 import api.models.RecentCompetitions;
 import api.models.cotd.COTD;
+import api.models.cotd.COTDPlayerResult;
 import api.models.cotd.COTDResults;
 import api.models.dto.COTDDTO;
 import api.models.player.Player;
@@ -28,9 +29,9 @@ public class TrackmaniaIOApi {
         return competitions;
     }
 
-    public List<Player> getResultsOfCup(long competitionId, long matchId) {
-        List<Player> cotdResults = new ArrayList<>();
-        String url = BASE_URL + COMP + "/" + competitionId + "/results/" + matchId + "/";
+    public List<COTDPlayerResult> getResultsOfCup(long competitionId, long matchId) {
+        List<COTDPlayerResult> cotdResults = new ArrayList<>();
+        String url = BASE_URL + COMP + "/" + competitionId + "/match/" + matchId + "/";
         for (int i = 0; i < 4; i++) {
             String partUrl = url + i;
             cotdResults.addAll(new GetRequest<>(COTDResults.class, partUrl).execute().getPlayers());
@@ -44,7 +45,7 @@ public class TrackmaniaIOApi {
     }
 
     public void sendDataToMyRestAPI(COTDDTO cotddto) {
-        PostRequest<COTDDTO> postRequest = new PostRequest<>("http://85.214.165.29:8080/cotd/update/" + cotddto.getYear() + "/" + cotddto.getMonth() + "/" + cotddto.getDay(), cotddto);
+        PostRequest<COTDDTO> postRequest = new PostRequest<>("http://sowiemarkus.com:8080/cotd/update/" + cotddto.getYear() + "/" + cotddto.getMonth() + "/" + cotddto.getDay(), cotddto);
         postRequest.execute();
     }
 
@@ -54,12 +55,13 @@ public class TrackmaniaIOApi {
             @Override
             public void run() {
                 super.run();
-                List<Competition> competitions = getRecentCompetitions(11);
+                List<Competition> competitions = getRecentCompetitions(1);
                 for (int i = 0; i < competitions.size(); i++) {
                     COTD cotd = getCotd(competitions.get(i).getId());
                     if (cotd.getRounds() == null || cotd.getRounds().isEmpty() || !cotd.getRounds().get(0).isCompleted()) continue;
-                    List<Player> results = getResultsOfCup(competitions.get(i).getId(), cotd.getRounds().get(0).getMatches().get(0).getId());
+                    List<COTDPlayerResult> results = getResultsOfCup(competitions.get(i).getId(), cotd.getRounds().get(0).getMatches().get(0).getId());
                     COTDDTO cotddto = new COTDDTO(competitions.get(i), cotd, results);
+                    if (cotddto.getEdition() != 1)  continue;
                     sendDataToMyRestAPI(cotddto);
                     System.out.println("COTD <"+i+"> : " + ((((double)(i*5000)/(competitions.size() * 5000))*100) + "%"));
                     try {

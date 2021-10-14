@@ -1,5 +1,9 @@
 
-Fsquid:S1148D"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8‰—Íƒ‘/
-dsquid:S2142C"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8‰—Íƒ‘/
-[
-squid:S106@"9Replace this use of System.out or System.err by a logger.(´‹¹öþÿÿÿÿ8‰—Íƒ‘/
+dsquid:S2142E"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ëœ»Ÿ‘/
+V
+squid:S106B"9Replace this use of System.out or System.err by a logger.(¤ì…–8ëœ»Ÿ‘/
+esquid:UselessImportCheck	"5Remove this unused import 'api.models.player.Player'.(¢¼Îóýÿÿÿÿ8è•œ–§/
+Fsquid:S1148F"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ëœ»Ÿ‘/
+Isquid:S1481I"&Remove this unused "x" local variable.(ž¾„ëüÿÿÿÿ8ëœ»Ÿ‘/
+u
+squid:S135;"YReduce the total number of break and continue statements in this loop to use at most one.(òÚæ8° Í˜¶/

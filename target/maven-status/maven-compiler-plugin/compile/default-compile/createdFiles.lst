@@ -1,5 +1,6 @@
 api\TrackmaniaIOApi$1.class
 api\models\Competition.class
+api\models\author\Map.class
 bot\Bot.class
 api\models\player\Zone.class
 api\PostRequest.class
@@ -10,6 +11,7 @@ api\GetRequest.class
 api\models\dto\PlayerResultDTO.class
 api\models\Match.class
 bot\Bot$1.class
+api\models\cotd\COTDPlayerResult.class
 api\models\player\Player.class
 api\TrackmaniaIOApi.class
 api\models\dto\COTDDTO.class

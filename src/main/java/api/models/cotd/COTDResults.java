@@ -1,6 +1,5 @@
 package api.models.cotd;
 
-import api.models.player.Player;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
@@ -8,13 +7,13 @@ import java.util.List;
 public class COTDResults {
 
     @SerializedName("results")
-    private List<Player> players;
+    private List<COTDPlayerResult> players;
 
-    public List<Player> getPlayers() {
+    public List<COTDPlayerResult> getPlayers() {
         return players;
     }
 
-    public void setPlayers(List<Player> players) {
+    public void setPlayers(List<COTDPlayerResult> players) {
         this.players = players;
     }
 }
