@@ -25,6 +25,8 @@ The first information I need to get the result of a cup is the `competition id` 
 
 GET `https://trackmania.io/api/cotd/<page>`
 
+* Example: <a href="https://trackmania.io/api/cotd/0">Test</a>
+
 CodeCat has a nice feature to page the results. The `page` parameter can be any number bigger or equal to zero. If you call `https://trackmania.io/api/cotd/0` you will get the first (normally) 25 results. If you need more information you can call `https://trackmania.io/api/cotd/1` afterwards to get the next 25 results.
 
 | Name               | Type        | Description       | 
@@ -35,7 +37,7 @@ CodeCat has a nice feature to page the results. The `page` parameter can be any 
 | `starttime`             | long      | timestamp of the start of the competition |
 | `endtime`    | long        | timestamp of the end of the competition  |
 
-```
+```javascript
 {
   competitions: [
     {
