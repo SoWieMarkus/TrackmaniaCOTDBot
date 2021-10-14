@@ -6,7 +6,7 @@ This project is a bot to harvest the results of the cup of the days.
 
 Last update: 27.04.2021
 
-I am using the the API <a href="trackmania.io">trackmania.io</a> by <a href="https://github.com/codecat">CodeCat</a>. If you want to use this API for your own projects, <a href="https://github.com/codecat">CodeCat</a> allowes the usage of the API under the following conditions:
+I am using the API of <a href="trackmania.io">trackmania.io</a> by <a href="https://github.com/codecat">CodeCat</a>. If you want to use this API for your own projects, <a href="https://github.com/codecat">CodeCat</a> allowes the usage of the API under the following conditions:
 
 * The API is unsupported. If CodeCat removes/changes something, CodeCat will (likely) not give notice of it, and you'll have to deal with it yourself.
 * The API is undocumented. You're on your own to figure out how the API works and what you need from it.
@@ -19,39 +19,48 @@ With the API of trackmania.io I am collecting data about the most recent cup of 
 
 ### How to get the results of a cup of the day using the trackmania.io API
 
-The first information I need to get the result of a cup is the `competion id` of the cup
+The first information I need to get the result of a cup is the `competition id` of the cup
 
 ### Get the competition Id
 
 GET `https://trackmania.io/api/cotd/<page>`
+
+* Example: <a href="https://trackmania.io/api/cotd/0">Latest COTD's</a>
 
 CodeCat has a nice feature to page the results. The `page` parameter can be any number bigger or equal to zero. If you call `https://trackmania.io/api/cotd/0` you will get the first (normally) 25 results. If you need more information you can call `https://trackmania.io/api/cotd/1` afterwards to get the next 25 results.
 
 | Name               | Type        | Description       | 
 | ------------------ | ----------- | ----------------- | 
 | `id`           | long      | Id of the competition. You need this to access the results of the cup. |
-| `name`      | String      | Name of the competition. You can extract the date from that. | 
+| `name`      | String      | Name of the competition. You can extract the date from that. Also the #<number> gives information about which of the three cotds of a day. | 
 | `players` | long        | Amount of player participating at the cup | 
 | `starttime`             | long      | timestamp of the start of the competition |
 | `endtime`    | long        | timestamp of the end of the competition  |
 
-```
+```javascript
 {
   competitions: [
     {
-      id: 344,
-      name: "Cup of the Day 2021-04-26",
-      players: 2532,
-      starttime: 1619457390,
-      endtime: 1619464590
+     id: 1164,
+     name: "Cup of the Day 2021-10-14 #3",
+     players: 0,
+     starttime: 1634289390,
+     endtime: 1634296590
     },
     {
-      id: 343,
-      name: "Cup of the Day 2021-04-25",
-      players: 2275,
-      starttime: 1619370990,
-      endtime: 1619378190
+     id: 1163,
+     name: "Cup of the Day 2021-10-14 #2",
+     players: 0,
+     starttime: 1634260590,
+     endtime: 1634267790
     },
+    {
+      id: 1162,
+      name: "Cup of the Day 2021-10-14 #1",
+      players: 2537,
+      starttime: 1634231790,
+      endtime: 1634238990
+     },
   ...
   ]
 }
@@ -62,14 +71,24 @@ With that competition Id we can query the actual competition behind the cup of t
 ### Get the competition behind the cup of the day
 
 GET `https://trackmania.io/api/comp/<competitionId>`
-
-```
+  
+* Example: <a href="https://trackmania.io/api/comp/1162">COTD with competitionId 1162</a>
+  
+```javascript
 {
   id: 344,
   numplayers: 2532,
   liveid: "LID-COMP-oyportjala2mm5p",
-  creator: "afe7e1c1-7086-48f7-bde9-a7e320647510",
-  creatordisplayname: "Nadeo",
+  creatorplayer: {
+    name: "Nadeo",
+    id: "afe7e1c1-7086-48f7-bde9-a7e320647510",
+    meta: {
+      vanity: "nadeo2",
+      comment: "This is a secondary Nadeo system account that authors COTD competitions.",
+      mainaccount: "d2372a08-a8a1-46cb-97fb-23a161d85ad0",
+      nadeo: true
+    }
+  },
   name: "Cup of the Day 2021-04-26",
   description: "",
   registrationstart: 0,
@@ -103,22 +122,11 @@ GET `https://trackmania.io/api/comp/<competitionId>`
       ]
     }
   ],
-  challengequalifier: {
-    id: 232,
-    name: "Cup of the Day 2021-04-26 - Challenge",
-    status: "HAS_SERVERS",
-    servers: 0,
-    maps: 1,
-    admins: [
-      {
-        accountid: "0060a0c1-2e62-41e7-9db7-c86236af3ac4",
-        displayname: "magnetik.org"
-      },
-      {
-        accountid: "54e4dda4-522d-496f-8a8b-fe0d0b5a2a8f",
-        displayname: "Braxilior"
-      },
-      ...
+  challenges: [
+    {
+      id: 606,
+      name: "Qualifier"
+    }
   ]
 }
 ```
@@ -127,9 +135,11 @@ Many information ^^. For this project the interesting data is only the `id` of t
 
 ### Get the results of the cup of the day
 
-GET `https://trackmania.io/api/comp/<ompetionId>/results/<matchId>/<page>`
+GET `https://trackmania.io/api/comp/<competionId>/match/<matchId>/<page>`
+  
+  * Example: <a href="https://trackmania.io/api/comp/1162/match/15391/0">First 25 players of Match 1</a>
 
-```
+```javascript
 {
   results: [
     {
